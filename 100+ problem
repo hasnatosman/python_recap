@@ -1,0 +1,165 @@
+## Add Two Numbers in Python
+
+def add_two_numbers(a, b):
+    return a + b
+
+print("Sum:", add_two_numbers(3, 5))
+
+## Print Hello World
+
+print("Hello, World!")
+
+## Find the Square Root
+
+import math
+
+def find_square_root(number):
+    return math.sqrt(number)
+
+print("Square Root:", find_square_root(16))
+
+## Calculate the Area of a Triangle
+
+def area_of_triangle(base, height):
+    return 0.5 * base * height
+
+print("Area of Triangle:", area_of_triangle(5, 10))
+
+## Solve Quadratic Equation
+
+def solve_quadratic(a, b, c):
+    discriminant = b**2 - 4*a*c
+    root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+    root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+    return root1, root2
+
+print("Roots:", solve_quadratic(1, -7, 10))
+
+## Swap Two Variables
+
+def swap_variables(a, b):
+    a, b = b, a
+    return a, b
+
+print("Swapped Variables:", swap_variables(3, 7))
+
+## Generate a Random Number
+
+import random
+
+print("Random Number:", random.randint(1, 100))
+
+## Convert Kilometers to Miles
+
+def km_to_miles(km):
+    return km * 0.621371
+
+print("Miles:", km_to_miles(5))
+
+## Convert Celsius to Fahrenheit
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+print("Fahrenheit:", celsius_to_fahrenheit(25))
+
+## Check if a Number is Positive, Negative or 0
+
+def check_number(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+print("Number is:", check_number(-5))
+
+## Check if a Number is Odd or Even
+
+def odd_or_even(num):
+    return "Even" if num % 2 == 0 else "Odd"
+
+print("Number is:", odd_or_even(4))
+
+## Check Leap Year
+
+def is_leap_year(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+print("Leap Year:", is_leap_year(2024))
+
+## Find the Largest Among Three Numbers
+
+def largest_of_three(a, b, c):
+    return max(a, b, c)
+
+print("Largest Number:", largest_of_three(3, 7, 5))
+
+## Check Prime Number
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+print("Is Prime:", is_prime(17))
+
+## Print All Prime Numbers in an Interval
+
+def primes_in_interval(start, end):
+    return [num for num in range(start, end + 1) if is_prime(num)]
+
+print("Primes in Interval:", primes_in_interval(10, 20))
+
+## Find the Factorial of a Number
+
+def factorial(num):
+    if num == 0:
+        return 1
+    return num * factorial(num - 1)
+
+print("Factorial:", factorial(5))
+
+## Display the Multiplication Table
+
+def multiplication_table(num):
+    for i in range(1, 11):
+        print(f"{num} x {i} = {num * i}")
+
+multiplication_table(5)
+
+## Print the Fibonacci Sequence
+
+def fibonacci_sequence(n):
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib
+
+print("Fibonacci Sequence:", fibonacci_sequence(10))
+
+## Check Armstrong Number
+
+def is_armstrong(num):
+    digits = [int(d) for d in str(num)]
+    return num == sum(d**len(digits) for d in digits)
+
+print("Is Armstrong:", is_armstrong(153))
+
+## Find Armstrong Numbers in an Interval
+
+def armstrong_in_interval(start, end):
+    return [num for num in range(start, end + 1) if is_armstrong(num)]
+
+print("Armstrong Numbers:", armstrong_in_interval(100, 999))
+
+## Find the Sum of Natural Numbers
+
+def sum_of_natural_numbers(n):
+    return n * (n + 1) // 2
+
+print("Sum of Natural Numbers:", sum_of_natural_numbers(10))
